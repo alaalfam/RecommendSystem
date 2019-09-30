@@ -9,7 +9,7 @@ class CSVtoDictConverter:
             for entry in reader:
                 username = entry[0]
                 artist = entry[1]
-                rating = entry[2]
+                rating = float(entry[2])
                 if username in dictionary:
                     dictionary[username][artist] = rating
                 else:
